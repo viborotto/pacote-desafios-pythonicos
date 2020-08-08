@@ -10,7 +10,12 @@ PS: Python não possui o operador ++, porém += funciona.
 
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    # achar os elementos que tenham 2 ou mais itens & o primeiro e ultimo item sao iguais
+    c = 0
+    for i in words:
+        if len(i) >= 2 and i[0]==i[len(i)-1]:
+            c += 1
+    return c
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
