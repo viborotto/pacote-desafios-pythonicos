@@ -1,18 +1,31 @@
 """
 07. front_back
-
 Considere dividir uma string em duas metades.
 Caso o comprimento seja par, a metade da frente e de trás tem o mesmo tamanho.
 Caso o comprimento seja impar, o caracter extra fica na metade da frente.
-
 Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
-
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
+    if len(a) % 2 == 0 and len(b) % 2 == 0:
+        ma = int(len(a) / 2)
+        mb = int(len(b) / 2)
+    if len(a) % 2 == 0 and len(b) % 2 != 0:
+        ma = int(len(a) / 2)
+        mb = int(len(b) / 2 + 1)
+    if len(a) % 2 != 0 and len(b) % 2 == 0:
+        ma = int(len(a) / 2 + 1)
+        mb = int(len(b) / 2)
+    if len(a) % 2 != 0 and len(b) % 2 != 0:
+        ma = int(len(a) / 2 + 1)
+        mb = int(len(b) / 2 + 1)
+    fa = a[:ma]
+    fb = b[:mb]
+    ta = a[ma:]
+    tb = b[mb:]
+    return f'{fa + fb + ta + tb}'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
