@@ -14,8 +14,9 @@ onde todas as instancias de stra foram substituidas por strb.
 """
 
 def fix_start(s):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # +++ SUA SOLUÇÃO +++ substiruir s por *, observe que da para eu definir a partir de qual posicao vai comecar o replace
+    if len(s) > 1:
+        return s[0] + s[1:].replace(s[:1], "*")
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
