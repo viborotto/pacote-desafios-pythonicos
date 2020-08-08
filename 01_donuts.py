@@ -11,7 +11,10 @@ e donuts(23) retorna 'Number of donuts: many'
 
 def donuts(count):
     # +++ SUA SOLUÇÃO +++
-    return
+    if count < 10:
+        return f'Number of donuts: {count}'
+    else:
+        return 'Number of donuts: many'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -19,7 +22,7 @@ def donuts(count):
 def test(f, in_, expected):
     """
     Executa a função f com o parâmetro in_ e compara o resultado com expected.
-    :return: Exibe uma mensagem indicando se a função f está correta ou não.
+    :return: Exibe uma  mensagem indicando se a função f está correta ou não.
     """
     out = f(in_)
 
